@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
 <!--<h1>Welcome to Home Page</h1>-->
 <!--<h1>Welcome to Home Page, <span style="color: blue;">{{ name }}</span></h1>-->
 <!--<h2>This is the full home page</h2>-->
@@ -35,4 +39,13 @@
         {% endfor %}
     </div>
     <br/>
+    <h2>Join our mailing list:</h2>
+    <form action="{% url 'signup' %}">
+        <div class="mb-3">
+            <label for="email" class="form-label">Enter your email: </label>
+            <input type="email" class="form-control" name="email">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
 </div>
+{% endblock content %}
